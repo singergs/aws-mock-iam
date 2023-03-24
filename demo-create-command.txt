@@ -1,4 +1,3 @@
 aws iam create-service-linked-role --aws-service-name elasticbeanstalk.amazonaws.com
 
-aws iam create-role --path /tenantAccountPolicies/ --permissions-boundary arn:aws:iam::520374142121:policy/permissionboundarypolicy/PermissionBoundaryPolicyForTenantAccount2
-
+aws iam create-role --path /tenantAccountPolicies/ --assume-role-policy-document file://demo-tp.json --permissions-boundary arn:aws:iam::520374142121:policy/permissionboundarypolicy/PermissionBoundaryPolicyForTenantAccount2 --role-name test123
